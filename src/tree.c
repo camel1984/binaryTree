@@ -2,4 +2,5 @@
 #include "stdio.h"
 int f(){
     printf("this is f\n");
+    return 0;
 }
