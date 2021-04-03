@@ -7,6 +7,6 @@ struct mynode{
     struct mynode * left;
     struct mynode * right;
     char * data;
-}
+};
 
 #endif

@@ -1,2 +1,2 @@
 bin_PROGRAMS = binaryTree
-binaryTree_SOURCES = main.c tree.h tree.c
+binaryTree_SOURCES = main.c mytree.h mytree.c
