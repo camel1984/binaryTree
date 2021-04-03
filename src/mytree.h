@@ -9,4 +9,8 @@ struct mynode{
     char * data;
 };
 
+
+struct mynode * createTree();
+void traverseTree(struct mynode * root);
+
 #endif

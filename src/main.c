@@ -7,9 +7,8 @@
 int main(int argc, char ** argv){
     f();
 
-    struct mynode * root = (struct mynode*)malloc(sizeof(struct mynode)); 
+    struct mynode * root = createTree();
 
-    root->data = strdup("node0");
-
+    traverseTree(root);
     return 0;
 }
