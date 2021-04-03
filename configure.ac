@@ -12,7 +12,7 @@ AC_PROG_CC
 AC_PROG_INSTALL
 
 # Checks for header files.
-AC_CHECK_HEADERS([stdlib.h stdio.h])
+AC_CHECK_HEADERS([stdlib.h stdio.h string.h])
 
 # Checks for command-line options
 
