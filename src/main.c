@@ -1,6 +1,9 @@
 #include "config.h"
-#include "tree.h"
+#include "stdlib.h"
+#include "stdio.h"
+#include "mytree.h"
 
 int main(int argc, char ** argv){
     f();
+    return 0;
 }
