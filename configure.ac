@@ -5,6 +5,7 @@ AC_PREREQ([2.69])
 AC_INIT([binaryTree], [1.0], [wangshuaijie@hotmail.com])
 AM_INIT_AUTOMAKE
 LT_PREREQ([2.4.2])
+LT_INIT
 AC_CONFIG_SRCDIR([src/main/main.c])
 AC_CONFIG_HEADERS([config.h])
 
