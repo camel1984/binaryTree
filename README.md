@@ -3,8 +3,8 @@ developer:
 1. ./bootstrap.sh, it will generate configure script and other required files
 2. ./configure
 3. make
-4. sudo make install, this will install binaries and libs into /usr/local prefix, you can change it with ./configure
-5. to uninstall the program, manually delete files under /usr/local/bin and /usr/local/lib
+4. sudo make install, this will install header files,libs and binaries into /usr/local prefix:/usr/local/include/, /usr/local/lib/, /usr/local/bin/ you can change it with ./configure
+5. to uninstall the program, manually delete files under /usr/local/include/, /usr/local/lib/ and /usr/local/bin/.
 6. to locally execute uninstallled program:
     after make install, there will be two files created:
     src/main/binaryTree
@@ -36,6 +36,7 @@ binaryTree  lt-binaryTree
 
 that lt-binaryTree is the wrapper binary that depends on the local uninstalled lib, while binaryTree is the one depends on the system lib:
 
+
 [ec2-user@ip-172-31-93-147 binaryTree]$ ldd src/main/.libs/binaryTree
 	linux-vdso.so.1 (0x00007ffea2d97000)
 	libmytree.so.0 => not found
@@ -47,6 +48,12 @@ that lt-binaryTree is the wrapper binary that depends on the local uninstalled l
 	libc.so.6 => /lib64/libc.so.6 (0x00007f78ba9fb000)
 	/lib64/ld-linux-x86-64.so.2 (0x00007f78bafa8000)
 
+
+
+
+
+
+
 [ec2-user@ip-172-31-93-147 binaryTree]$ src/main/.libs/binaryTree
 src/main/.libs/binaryTree: error while loading shared libraries: libmytree.so.0: cannot open shared object file: No such file or directory
 [ec2-user@ip-172-31-93-147 binaryTree]$ src/main/.libs/lt-binaryTree
@@ -57,11 +64,40 @@ node4
 node0
 node2
 
+and static and shared lib are also created in the .libs subdirectory in src/lib:
+
+
+
+[ec2-user@ip-172-31-93-147 binaryTree]$ ls src/lib/.libs/
+libmytree.a  libmytree.la  libmytree.lai  libmytree_la-mytree.o  libmytree.so  libmytree.so.0  libmytree.so.0.0.0
+
 7. make dist
 8. the dist package can be distributed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 user:
 1. ./configure
 2. make
 3. sudo make install
+4. uninstall is the same as developer.
+
+
+
+
 
