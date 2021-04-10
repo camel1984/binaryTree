@@ -1,1 +1,1 @@
-SUBDIRS = lib main
+SUBDIRS = include lib main
